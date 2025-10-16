@@ -1,15 +1,10 @@
-const uppercaseAll = (word1, word2, word3) => {
-  return [
-    word1.toUpperCase(),
-    word2.toUpperCase(),
-    word3.toUpperCase(),
-  ];
+const uppercaseAll = (...words) => {
+  return words.map(word => word.toUpperCase());
 };
 
 const destructureCoordinates = (coordinates) => {
-  const x = coordinates[0];
-  const y = coordinates[1];
-  return `X is: ${x}, Y is: ${y}`; // no touching this line!
+  const [x, y] = coordinates;
+  return `X is: ${x}, Y is: ${y}`;
 };
 
 module.exports = {
